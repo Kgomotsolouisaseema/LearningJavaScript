@@ -66,41 +66,46 @@ let students = [
 //    b) use a for loop in conjunction with if statements to grab a list of students (full name and also their avg) with an average (avg) over 80.
 //    c) Store these students information in an array called honoraryStudents.
 
-let honorStudents = []
-for(let i = 0; i < students.length; i++)
-{
-    if (students[i].avg >= 80) {
-         honorStu = {
-         fullname: students[i].name + students[i].surname ,
-         average: students[i].avg}
-    
-         honorStudents.push(honorStu)
-         
-  }};
-            console.log(honorStudents);
+let honorStudents = [];
+for (let i = 0; i < students.length; i++) {
+  if (students[i].avg >= 80) {
+    honorStu = {
+      fullname: students[i].name + students[i].surname,
+      average: students[i].avg,
+    };
+
+    honorStudents.push(honorStu);
+  }
+}
+console.log(honorStudents);
 
 // 2. Use code to determine how many students are honorary students, and log that to the terminal
 
-const results = students.filter(obj =>{
-    return obj.avg > 80 ;
-}).length
+const results = students.filter((obj) => {
+  return obj.avg > 80;
+}).length;
 console.log(results);
 // 3. Write a for loop to add a new key on the students array.
 //    The key will be the word 'honorary' and the value will simply be true, for honorary students and false for the others.
 
-for (let i=0 ;i < students.length ; i ++){
-    students[i].honorary = false                                //initialised key honorary and set it to false
+var updatingTopClass=() =>{
+  for (let i = 0; i < students.length; i++) {
+    students[i].honorary = false; //initialised key honorary and set it to false
 
-    if(students[i].avg >= 80){                                  //conditional statement
-        students[i].honorary = true                             // if the condition is passed then false becomes true
-        }
+    if (students[i].avg >= 80) {
+      //conditional statement
+      students[i].honorary = true; // if the condition is passed then false becomes true
+    }
     console.log(students);
+  }
 }
-// for (var a=0 ; a < students.length ; a++){
-//     students[a].subavg = false
+updatingTopClass()
+return
 
-//     if(students[a].avg < 80){
-//         students.subavg = true
-//     }
-//     console.log(students)
-// }
+
+// All the below points will add onto Task 4.
+// Create functions for all tasks in Task 4, create a separate function for each subtask.
+// Using HTML, link each function to its own button. The functions should be only called when you click on the button.  (Create a new HTML file if one doesn't exist yet)
+
+
+

@@ -97,3 +97,4 @@ moreData.listOfFriends=listOfFriends     //outputs list of friends with 2 values
      console.log(moreData);                            //console log the contents of moreData
 
 
+    

@@ -1,0 +1,142 @@
+<script>
+  // /Task 1 declare the following variables:
+  let username = "Glen";
+  let isStudent = false;
+  let totalDebt = 1359;
+  let age = 50;
+  const listOfFriends = ["Ben", "Gwen", "Sipho", "Thuli"];
+  let moreData = {
+    mother: "Nomsa",
+    father: "Themba",
+    employer: "CSIR",
+    salary: 130289,
+  };
+</script>
+
+<!-- // Task 5:
+// Task five will focus on functions, calling functions and sending data to functions using function arguments/parameters. 
+// The task won't mention calling the functions, but you will need to call all the functions you create and display them using html or console.log
+// Basic functions:
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Javascript functions</title>
+    <p id="demo"></p>
+  </head>
+  <body>
+    <!-- // 1. Create a function that returns the sum of two values eg function add(a, b) { return a * b } -->
+    <script>
+      function add(a, b) {
+        return a + b;
+      }
+      let sum = add(4, 10);
+      // document.getElementById("demo").innerHTML = sum
+    </script>
+    <!-- // 2. Create a function that returns the difference between two values -->
+    <script>
+      function diff(c, d) {
+        return c - d;
+      }
+      let result = diff(10, 4);
+      //  document.getElementById("demo").innerHTML = result
+    </script>
+    <!-- // 3. Create a function that returns a product of two values -->
+    <script>
+      function Product(e, f) {
+        return e * f;
+      }
+      let product = Product(5, 5);
+      //   document.getElementById("demo").innerHTML= product
+    </script>
+    <!-- // 4. Create a function that returns a quotient (number that remains when you divide one number by another number) -->
+    <script>
+      function remain(g, h) {
+        return g % h;
+      }
+      let remainder = remain(15, 2);
+      document.getElementById("demo").innerHTML = remainder;
+    </script>
+    <!-- 5. Create a function that accepts one value as an argument, and returns the square of that value.  -->
+    <!-- // (if you send 2 as an argument, should receive 4 as an answer, if it's 3 it should return 9) -->
+    <script>
+      function square() {
+        return 2 ** 2;
+      }
+      let root = square(4);
+      document.getElementById("demo").innerHTML = root;
+    </script>
+
+    <script>
+      function checkFriend(name) {
+        if (listOfFriends.includes(name)) {
+          return `${name} is in the list of friends.`;
+        }
+      }
+      let check = checkFriend("Thuli");
+      // document.getElementById("demo").innerHTML = check;
+    </script>
+    <script>
+// task 5.2.b Create a function that accepts an argument of name and uses the given name to remove an item from our listOfFriends array if it exists
+     
+      function givenName(name){
+        if (listOfFriends.includes(name)) {
+        const index = listOfFriends.indexOf(name);
+        if (index !== -1){
+
+      listOfFriends.splice(index, 1);
+         console.log( `Removed ${name} from the list of friends.`);
+      } else{
+        console.log( `${name} is not found in the list of friends `);
+      }; 
+        }};
+      
+       
+      const nameToRemove = "Sipho"
+      givenName(nameToRemove);
+      document.getElementById("demo").innerHTML=listOfFriends
+      console.log(listOfFriends)
+    </script>
+    <script>
+// /7  Check if salary is greater than 70000.
+//If True: add the mother and fathers name to the listOfFriends array, after adding the mother and father console log the indexes of their names in the new array.
+//Else add the listOfFriends array to the moreData object. The key for the array in the object should be 'friends'. 
+//You might want to research keys and values in objects for this.
+
+const keys = Object.keys(moreData);                         // this line outputs the values within the moreData object 
+const searchKey4 = 'mother';                                // this outputs the name mother when we log searchkey4
+const searchKey5 = 'father';                                // this outputs the name father when we log searchkey5
+const index4 = keys.indexOf(searchKey4);                    // output the index of mother in moredata
+const index5 = keys.indexOf(searchKey5);                    // outputs the index of father in moredata
+
+listOfFriends.push(moreData.mother, moreData.father);       // Add the values to the existing array
+const locks = Object.keys(listOfFriends);
+//console.log(listOfFriends)                                // super weird how console.log(displays the keys:(,0,1,2,3,) of list of friends but console.log(listOffriends, siplays the values ))
+const searchKey6 = 'mother';
+const searchKey7 = 'father';
+
+const index6 = keys.indexOf(searchKey6); // i declared a variable called index6 ,the keys.indexOF:locates the searchkey6 values index in list of friends,output the index of mother from the list of friends array
+const index7 = keys.indexOf(searchKey7); // i declared a variable called index6 ,the keys.indexOF:locates the searchkey7 values index in list of friends,output the index of father  from the list of friends array
+// moreData.listOfFriends=listOfFriends     //outputs list of friends with 2 values from the said object(moreData) are present,themba and thuli  
+ 
+ if(moreData.salary > 70000)                                //if in the object moreData,the salary value is greater the 70 000
+      console.log(index6,index7);                           // console the indexes of index6 and index7
+ else 
+     console.log(moreData);                            //console log the contents of moreData
+
+// TASK 5.2.c //  Create a function that handles Task 3.7. Just remove the code from the main block to the function and make sure the function is called.
+(function (){
+  if(moreData.salary > 70000)                                
+      console.log(index6,index7);                           
+ else 
+     console.log(moreData);
+})() 
+// document.getElementById("demo").innerHTML=moreData
+ </script>
+ <script>
+
+  
+ </script>
+  </body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>Honarary Roll Students</title>
+    <p id="def"> </p>
+</head>
+<main>   
+<script>
+   let students = [
+  {
+    name: "Ben",
+    surname: "Nkosi",
+    subjects: ["Maths", "Biology", "CAT"],
+    avg: 90,
+  },
+  {
+    name: "Priya",
+    surname: "Patel",
+    subjects: ["Maths", "Biology", "CAT"],
+    avg: 87,
+  },
+  {
+    name: "Nkosinathi",
+    surname: "Khoza",
+    subjects: ["Maths", "Biology", "CAT"],
+    avg: 33,
+  },
+  {
+    name: "Glen",
+    surname: "Phiri",
+    subjects: ["Maths", "Biology", "CAT"],
+    avg: 45,
+  },
+  {
+    name: "Vinit",
+    surname: "Patel",
+    subjects: ["Maths", "Biology", "CAT"],
+    avg: 42,
+  },
+  {
+    name: "Ben",
+    surname: "Singh",
+    subjects: ["Maths", "Biology", "CAT"],
+    avg: 81,
+  },
+  {
+    name: "Given",
+    surname: "Madakana",
+    subjects: ["Maths", "Biology", "CAT"],
+    avg: 93,
+  },
+  {
+    name: "Ressick",
+    surname: "Olifant",
+    subjects: ["Maths", "Biology", "CAT"],
+    avg: 72,
+  },
+  {
+    name: "Stan",
+    surname: "Kamoto",
+    subjects: ["Maths", "Biology", "CAT"],
+    avg: 60,
+  },
+  {
+    name: "Sharon",
+    surname: "Mavimbela",
+    subjects: ["Maths", "Biology", "CAT"],
+    avg: 90,
+  },
+];
+
+// Note: Honorary students in our case are students with an avg above 80
+// 1. a) Building on what we did earlier,
+//    b) use a for loop in conjunction with if statements to grab a list of students (full name and also their avg) with an average (avg) over 80.
+//    c) Store these students information in an array called honoraryStudents.
+
+// let honorStudents = [];
+// for (let i = 0; i < students.length; i++) {
+//   if (students[i].avg >= 80) {
+//     honorStu = {
+//       fullname: students[i].name + students[i].surname,
+//       average: students[i].avg,
+//     };
+//     honorStudents.push(honorStu);
+//   }}
+// console.log(honorStudents);
+
+// 2. Use code to determine how many students are honorary students, and log that to the terminal
+
+// const results = students.filter((obj) => {
+//   return obj.avg > 80;
+// }).length;
+// console.log(results);
+
+// 3. Write a for loop to add a new key on the students array.
+//    The key will be the word 'honorary' and the value will simply be true, for honorary students and false for the others.
+
+var updatingTopClass=() =>{
+  for (let i = 0; i < students.length; i++) {
+    students[i].honorary = false; //initialised key honorary and set it to false
+
+    if (students[i].avg >= 80) {
+      //conditional statement
+      students[i].honorary = true; // if the condition is passed then false becomes true
+    }
+    console.log(students);
+  }
+}
+updatingTopClass()
+
+// TASK 5
+// All the below points will add onto Task 4.
+// Create functions for all tasks in Task 4, create a separate function for each subtask.
+// Using HTML, link each function to its own button. The functions should be only called when you click on the button.  (Create a new HTML file if one doesn't exist yet) 
+</script>
+</main>
+
+<body>
+    <script>
+function honarRoll(){
+    let honorStudents = [];
+for (let i = 0; i < students.length; i++) {
+  if (students[i].avg >= 80) {
+    honorStu = {
+      fullname: students[i].name + students[i].surname,
+      average: students[i].avg,
+}};  
+honorStudents.push(honorStu); 
+}};
+
+// console.log(honorStudents);
+// let higher = honorStu
+document.getElementById("def").innerHTML=honarRoll
+</script>
+<script>
+// 2. Use code to determine how many students are honorary students, and log that to the terminal
+
+
+const results = students.filter((obj) => {
+  return obj.avg > 80;
+}).length;
+console.log(results);
+//  document.getElementById("def").innerHTML=results
+</script>
+
+<script>
+// 3. Write a for loop to add a new key on the students array.
+//    The key will be the word 'honorary' and the value will simply be true, for honorary students and false for the others.
+
+const updatingTapClass=() =>{
+  for (let i = 0; i < students.length; i++) {
+    students[i].honorary = false; //initialised key honorary and set it to false
+
+    if (students[i].avg >= 80) {
+      //conditional statement
+      students[i].honorary = true; // if the condition is passed then false becomes true
+      
+    }
+    
+    // console.log(students);
+  }}
+// updatingTopClass()
+let trial=updatingTapClass
+document.getElementById("def").innerHTML=
+</script>
+<script>
+
+    // TASK 5;4
+function logger(event){
+    console.log(event.target.value)
+    console.log(event)
+    return logger
+}
+// let leg = logger
+// document.getElementById("def").innerHTML=leg
+
+</script> 
+<input type="file" id="HonarRoll" onchange="logger(event)">  
+<button onclick="honarRoll()"> honarRoll </button>
+<button onclick="results()"> results </button>
+<button onclick="updatingTapClass()"> updatingTapClass</button>
+
+</body> 
+</html>
